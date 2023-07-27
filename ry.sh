@@ -27,7 +27,7 @@ function start()
 	    echo "$AppName is running..."
 	else
 #		nohup java $JVM_OPTS -jar $AppName > /dev/null 2>&1 &
-		nohup java $JVM_OPTS -jar $AppName > $LOG_PATH 2>&1 &
+		nohup java $JVM_OPTS -jar $AppName -Dspring.profiles.active=test > $LOG_PATH 2>&1 &
 		echo "Start $AppName success..."
 	fi
 }
